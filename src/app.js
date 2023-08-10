@@ -1,3 +1,11 @@
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_DB, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+});
+
+
 const express = require("express");
 
 const { auth } = require("express-oauth2-jwt-bearer");
